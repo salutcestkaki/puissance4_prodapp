@@ -19,4 +19,13 @@ public class TestModele {
         assertTrue(model.pionEnPosition(6,2)==Modele.CASE_VIDE);
 
     }
+
+    @Test
+    public void testViderGrille(){
+        Modele model = new Modele();
+        model.lacherPionDansColonne(Modele.PION_JAUNE,2);
+        model.vider();
+
+        assertTrue(model.pionEnPosition(1,2)==Modele.CASE_VIDE);
+    }
 }
