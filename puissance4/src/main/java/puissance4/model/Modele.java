@@ -1,5 +1,8 @@
 package puissance4.model;
 
+import puissance4.exception.ExceptionColonneHorsBorne;
+import puissance4.exception.ExceptionLigneHorsBorne;
+
 import java.util.ArrayList;
 
 public class Modele {
@@ -46,5 +49,15 @@ public class Modele {
         nbPionJoue=nb;
     }
 
+    public void assurerNumeroLigne (int lig) throws ExceptionLigneHorsBorne {
+        if(lig<1 ||lig>NB_LIG){
+            throw new ExceptionLigneHorsBorne(""+lig);
+        }
+    }
 
+    public void assurerNumeroColonne (int col) throws ExceptionColonneHorsBorne{
+        if(col<1 ||col>NB_COLS){
+            throw new ExceptionColonneHorsBorne(""+col);
+        }
+    }
 }
