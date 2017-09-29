@@ -16,8 +16,13 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/puissance4/model/Modele.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="756">
-              <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-              <folding />
+              <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+              <folding>
+                <element signature="e#1080#1081#0" expanded="true" />
+                <element signature="e#1113#1114#0" expanded="true" />
+                <element signature="e#1153#1154#0" expanded="true" />
+                <element signature="e#1182#1183#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -293,8 +298,13 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/puissance4/model/Modele.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
-          <caret line="36" column="9" lean-forward="true" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-          <folding />
+          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding>
+            <element signature="e#1080#1081#0" expanded="true" />
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+            <element signature="e#1182#1183#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

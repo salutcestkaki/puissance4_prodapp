@@ -10,6 +10,7 @@ public class Modele {
     public static final int PION_JAUNE = 1;
     public static final int PION_ROUGE = 2;
     private ArrayList<ArrayList<Integer>> grille;
+    protected int nbPionJoue=0;
 
     public Modele(){
         grille = new ArrayList<ArrayList<Integer>>();
@@ -31,10 +32,18 @@ public class Modele {
         else return CASE_VIDE;
     }
 
-    public void vider(){
-        for(ArrayList<Integer> ligne : grille){
+    public void vider() {
+        for (ArrayList<Integer> ligne : grille) {
             ligne.clear();//jadore lanus
         }
+    }
+
+    public int nbPionJoue(){
+        return nbPionJoue;
+    }
+
+    public void setNbPionJoue(int nb){
+        nbPionJoue=nb;
     }
 
 
