@@ -33,7 +33,7 @@ public class Modele {
 
     public void vider(){
         for(ArrayList<Integer> ligne : grille){
-            ligne.clear();
+            ligne.clear();//jadore lanus
         }
     }
 
