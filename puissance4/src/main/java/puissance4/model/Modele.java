@@ -7,7 +7,7 @@ import puissance4.exception.ExceptionPionInconnu;
 
 import java.util.ArrayList;
 
-public class Modele {
+public class Modele implements ModelePuissance4 {
 
     public static final int NB_COLS = 7;
     public static final int NB_LIG = 6;
