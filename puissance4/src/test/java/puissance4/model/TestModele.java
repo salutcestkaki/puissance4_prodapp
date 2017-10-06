@@ -6,7 +6,10 @@ import puissance4.exception.ExceptionColonneHorsBorne;
 import puissance4.exception.ExceptionColonnePleine;
 import puissance4.exception.ExceptionPionInconnu;
 
+
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TestModele {
 
@@ -26,7 +29,7 @@ public class TestModele {
         assertTrue(model.pionEnPosition(1,2)==Modele.PION_JAUNE);
         assertTrue(model.pionEnPosition(3,2)==Modele.PION_JAUNE);
         assertTrue(model.pionEnPosition(6,2)==Modele.CASE_VIDE);
-
+        assertThat(model.pionEnPosition(6,2),equalTo(Modele.CASE_VIDE));
     }
 
     @Test
