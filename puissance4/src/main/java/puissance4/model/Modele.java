@@ -73,8 +73,13 @@ public class Modele {
     }
 
     public void assurerColonneNonPleine(int col) throws ExceptionColonnePleine{
-        if(ColonnePleine(col)==true){
+        if(colonnePleine(col)==true){
             throw new ExceptionColonnePleine(""+col);
         }
+    }
+
+    public boolean colonnePleine(int col){
+        ArrayList<Integer> colonne ;
+        return ;
     }
 }
