@@ -10,6 +10,17 @@ public class Launch {
         Modele model = new Modele();
         System.out.println(model.colonnePleine(1));
         model.lacherPionDansColonne(1,1);
+        model.lacherPionDansColonne(1,1);
+        model.lacherPionDansColonne(1,1);
+        model.lacherPionDansColonne(1,1);
+        model.lacherPionDansColonne(1,1);
+        model.lacherPionDansColonne(1,1);
+        System.out.println(model.pionEnPosition(1,1));
+        System.out.println(model.pionEnPosition(2,1));
+        System.out.println(model.pionEnPosition(3,1));
+        System.out.println(model.pionEnPosition(4,1));
+        System.out.println(model.pionEnPosition(5,1));
+        System.out.println(model.pionEnPosition(6,1));
         System.out.println(model.colonnePleine(1));
     }
 }

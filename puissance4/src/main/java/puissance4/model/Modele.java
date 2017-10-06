@@ -14,6 +14,11 @@ public class Modele {
     public static final int CASE_VIDE = 0;
     public static final int PION_JAUNE = 1;
     public static final int PION_ROUGE = 2;
+
+    public ArrayList<ArrayList<Integer>> getGrille() {
+        return grille;
+    }
+
     private ArrayList<ArrayList<Integer>> grille;
     protected int nbPionJoue=0;
 
@@ -79,15 +84,20 @@ public class Modele {
     }
 
     public boolean colonnePleine(int col){
-        ArrayList<Integer> colonne = grille.get(col);
-        if (colonne.isEmpty()) return false;
-        else{
-            for (Integer ligne : colonne){
-                if (ligne == null){
-                    return false;
-                }
-            }
-            return true;
+        ArrayList<Integer> colonne = grille.get(col-1);
+        System.out.println("michel1");
+        if (colonne.isEmpty()){
+            System.out.println("michel2");
+            return false;
         }
+
+        for (Integer ligne : colonne){
+            System.out.println("michel3"+ligne);
+            if (ligne != 1 || ligne !=2){
+                return false;
+            }
+        }
+        System.out.println("michel4");
+        return true;
     }
 }
