@@ -79,7 +79,15 @@ public class Modele {
     }
 
     public boolean colonnePleine(int col){
-        ArrayList<Integer> colonne ;
-        return ;
+        ArrayList<Integer> colonne = grille.get(col);
+        if (colonne.isEmpty()) return false;
+        else{
+            for (Integer ligne : colonne){
+                if (ligne == null){
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }

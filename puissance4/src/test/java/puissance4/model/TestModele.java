@@ -1,14 +1,23 @@
 package puissance4.model;
 
+import org.junit.Before;
 import org.junit.Test;
+import puissance4.exception.ExceptionColonneHorsBorne;
+import puissance4.exception.ExceptionColonnePleine;
+import puissance4.exception.ExceptionPionInconnu;
 
 import static org.junit.Assert.*;
 
 public class TestModele {
 
+    private Modele model;
+
+    @Before public void creeGrille(){
+        model = new Modele();
+    }
+
     @Test
-    public void testEmpilPionVerifPos(){
-        Modele model = new Modele();
+    public void testEmpilPionVerifPos() throws ExceptionColonneHorsBorne, ExceptionPionInconnu, ExceptionColonnePleine {
         model.lacherPionDansColonne(Modele.PION_JAUNE,2);
         model.lacherPionDansColonne(Modele.PION_ROUGE,2);
         model.lacherPionDansColonne(Modele.PION_JAUNE,2);
@@ -21,8 +30,7 @@ public class TestModele {
     }
 
     @Test
-    public void testViderGrille(){
-        Modele model = new Modele();
+    public void testViderGrille() throws ExceptionColonneHorsBorne, ExceptionPionInconnu, ExceptionColonnePleine {
         model.lacherPionDansColonne(Modele.PION_JAUNE,2);
         model.vider();
 
