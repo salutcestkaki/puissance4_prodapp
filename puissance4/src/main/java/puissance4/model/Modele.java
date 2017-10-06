@@ -1,7 +1,9 @@
 package puissance4.model;
 
 import puissance4.exception.ExceptionColonneHorsBorne;
+import puissance4.exception.ExceptionColonnePleine;
 import puissance4.exception.ExceptionLigneHorsBorne;
+import puissance4.exception.ExceptionPionInconnu;
 
 import java.util.ArrayList;
 
@@ -22,7 +24,10 @@ public class Modele {
         }
     }
 
-    public void lacherPionDansColonne(int pion, int col){
+    public void lacherPionDansColonne(int pion, int col) throws ExceptionColonnePleine, ExceptionColonneHorsBorne, ExceptionPionInconnu {
+        assurerNumeroColonne(col);
+        assurerPionValide(pion);
+        assurerColonneNonPleine(col);
         if(grille.get(col-1).size() < NB_LIG){
             grille.get(col-1).add(pion);
         }
@@ -55,9 +60,21 @@ public class Modele {
         }
     }
 
+    public void assurerPionValide(int pion) throws ExceptionPionInconnu{
+        if(pion<1 || pion >2){
+            throw new ExceptionPionInconnu(""+pion);
+        }
+    }
+
     public void assurerNumeroColonne (int col) throws ExceptionColonneHorsBorne{
         if(col<1 ||col>NB_COLS){
             throw new ExceptionColonneHorsBorne(""+col);
+        }
+    }
+
+    public void assurerColonneNonPleine(int col) throws ExceptionColonnePleine{
+        if(ColonnePleine(col)==true){
+            throw new ExceptionColonnePleine(""+col);
         }
     }
 }
