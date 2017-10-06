@@ -78,16 +78,16 @@ public class Modele {
     }
 
     public boolean colonnePleine(int col){
-        ArrayList<Integer> colonne = grille.get(col-1);
+        ArrayList<Pion> colonne = grille.get(col-1);
         System.out.println("michel1");
         if (colonne.isEmpty()){
             System.out.println("michel2");
             return false;
         }
 
-        for (Integer ligne : colonne){
+        for (Pion ligne : colonne){
             System.out.println("michel3"+ligne);
-            if (ligne != 1 || ligne !=2){
+            if (ligne != Pion.JAUNE || ligne !=Pion.ROUGE){
                 return false;
             }
         }

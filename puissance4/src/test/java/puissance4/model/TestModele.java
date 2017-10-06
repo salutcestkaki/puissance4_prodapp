@@ -32,7 +32,6 @@ public class TestModele {
         assertTrue(model.pionEnPosition(1,2)==JAUNE);
         assertTrue(model.pionEnPosition(3,2)==JAUNE);
         assertTrue(model.pionEnPosition(6,2)==CASEVIDE);
-        assertThat(model.pionEnPosition(6,2),equalTo(CASEVIDE));
     }
 
     @Test
