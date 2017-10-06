@@ -4,15 +4,10 @@ import java.awt.*;
 
 public class Pion implements  Contenu {
 
-    private Color couleur;
-    private Pion(Color coul){
-        couleur=coul;
-    }
-    public Pion rouge(){
-        return new Pion(Color.RED);
+    public static final Pion JAUNE = new Pion();
+    public static final Pion ROUGE = new Pion();
+    private Pion(){
+
     }
 
-    public Pion jaune(){
-        return new Pion(Color.yellow);
-    }
 }

@@ -14,39 +14,33 @@ public class Modele {
     public static final int CASE_VIDE = 0;
     public static final int PION_JAUNE = 1;
     public static final int PION_ROUGE = 2;
-
-    public ArrayList<ArrayList<Integer>> getGrille() {
-        return grille;
-    }
-
-    private ArrayList<ArrayList<Integer>> grille;
+    private ArrayList<ArrayList<Pion>> grille;
     protected int nbPionJoue=0;
 
     public Modele(){
-        grille = new ArrayList<ArrayList<Integer>>();
+        grille = new ArrayList<ArrayList<Pion>>();
         for (int i = 0 ; i < NB_COLS ; i++){
-            grille.add(new ArrayList<Integer>());
+            grille.add(new ArrayList<Pion>());
         }
     }
 
-    public void lacherPionDansColonne(int pion, int col) throws ExceptionColonnePleine, ExceptionColonneHorsBorne, ExceptionPionInconnu {
+    public void lacherPionDansColonne(Pion pion, int col) throws ExceptionColonnePleine, ExceptionColonneHorsBorne, ExceptionPionInconnu {
         assurerNumeroColonne(col);
-        assurerPionValide(pion);
         assurerColonneNonPleine(col);
         if(grille.get(col-1).size() < NB_LIG){
             grille.get(col-1).add(pion);
         }
     }
 
-    public int pionEnPosition(int lig, int col){
+    public Contenu pionEnPosition(int lig, int col){
         if(grille.get(col-1).size() > (lig-1) ){
             return grille.get(col-1).get(lig-1);
         }
-        else return CASE_VIDE;
+        else return Vide.CASEVIDE;
     }
 
     public void vider() {
-        for (ArrayList<Integer> ligne : grille) {
+        for (ArrayList<Pion> ligne : grille) {
             ligne.clear();//jadore lanus
         }
     }
